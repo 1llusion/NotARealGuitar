@@ -21,7 +21,7 @@ GENERATE_RES = 3
 IMAGE_SIZE = 224 # rows/cols
 IMAGE_CHANNELS = 3
 
-training_data = np.load('uploads/spell/guitars_data2.npy')
+training_data = np.load('uploads/spell/guitars_data_small.npy')
 
 def build_discriminator(image_shape):
     model = Sequential()
