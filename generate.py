@@ -25,6 +25,8 @@ training_data = np.load('/spell/guitars_data_small/guitars_data2.npy')
 print("Data Loaded")
 
 def build_discriminator(image_shape):
+    print(str(image_shape)
+    
     model = Sequential()
     model.add(Conv2D(32, kernel_size=3, strides=2,
     input_shape=image_shape, padding="same"))
@@ -75,8 +77,6 @@ def build_generator(noise_size, channels):
         model.add(Conv2D(channels, kernel_size=3, padding="same"))
         model.add(Activation("tanh"))
         input = Input(shape=(noise_size,))
-        
-        print("noise_size:", str(noise_size))
         
         generated_image = model(input)
 
