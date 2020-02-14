@@ -141,7 +141,11 @@ for epoch in range(EPOCHS):
     print("noise:", noise.shape)
     x_fake = generator.predict(noise)
    
-    
+    print("x_real:", x_real.shape)
+    print("y_real:", y_real.shape)
+    print("x_fake:", x_fake.shape)
+    print("y_fake:", y_fake.shape)
+          
     discriminator_metric_real = discriminator.train_on_batch(x_real, y_real)
     discriminator_metric_generated = discriminator.train_on_batch(x_fake, y_fake)
 
