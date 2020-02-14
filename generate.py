@@ -76,7 +76,7 @@ def build_generator(noise_size, channels):
         model.add(Activation("tanh"))
         input = Input(shape=(noise_size,))
         
-        print("noise_size:", noise_size.shape)
+        print("noise_size:", str(noise_size))
         
         generated_image = model(input)
 
