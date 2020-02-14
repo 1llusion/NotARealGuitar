@@ -58,8 +58,8 @@ def build_discriminator(image_shape):
 
 def build_generator(noise_size, channels):
     model = Sequential()
-    model.add(Dense(14 * 14 * 256, activation="relu", input_dim = noise_size))
-    model.add(Reshape((14, 14, 256)))
+    model.add(Dense(28 * 28 * 256, activation="relu", input_dim = noise_size))
+    model.add(Reshape((28, 28, 256)))
     model.add(UpSampling2D())
     model.add(Conv2D(256, kernel_size=3, padding="same"))
     model.add(BatchNormalization(momentum=0.8))
