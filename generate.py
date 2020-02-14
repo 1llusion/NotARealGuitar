@@ -135,6 +135,7 @@ for epoch in range(EPOCHS):
     x_real = training_data[idx]
 
     noise = np.random.normal(0, 1, (BATCH_SIZE, NOISE_SIZE))
+    print("noise:", noise.shape)
     x_fake = generator.predict(noise)
    
     
