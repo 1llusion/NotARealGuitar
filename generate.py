@@ -13,7 +13,7 @@ PREVIEW_COLS = 7
 PREVIEW_MARGIN = 4
 SAVE_FREQ = 100
 # Size vector to generate images from
-NOISE_SIZE = 100
+NOISE_SIZE = 224
 # Configuration
 EPOCHS = 1000 # number of iterations
 BATCH_SIZE = 224
@@ -35,7 +35,7 @@ def build_discriminator(image_shape):
     model.add(BatchNormalization(momentum=0.8))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dropout(0.25))
-    model.add(Conv2D(128, kernel_size=3, strides=2, padding="same"))
+    model.add(Conv2D(224, kernel_size=3, strides=2, padding="same"))
     model.add(BatchNormalization(momentum=0.8))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dropout(0.25))
