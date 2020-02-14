@@ -130,7 +130,7 @@ fixed_noise = np.random.normal(0, 1, (PREVIEW_ROWS * PREVIEW_COLS, NOISE_SIZE))
 cnt = 1
 
 print("Ready to train!")
-print("image_shape:", np.shape(image_shape))
+print("image_shape:", image_shape[0], image_shape[1], image_shape[2])
 for epoch in range(EPOCHS):
     idx = np.random.randint(0, training_data.shape[0], BATCH_SIZE)
     x_real = training_data[idx]
