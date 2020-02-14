@@ -26,7 +26,7 @@ print("Data Loaded")
 
 def build_discriminator(image_shape):
     model = Sequential()
-    model.add(Conv2D(74, kernel_size=3, strides=2,
+    model.add(Conv2D(32, kernel_size=3, strides=2,
     input_shape=image_shape, padding="same"))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dropout(0.25))
