@@ -135,10 +135,8 @@ for epoch in range(EPOCHS):
     x_real = training_data[idx]
 
     noise = np.random.normal(0, 1, (BATCH_SIZE, NOISE_SIZE))
+    print("noise:", noise.shape)
     x_fake = generator.predict(noise)
-
-    print("x_fake:", x_fake.shape)
-    print("y_fake:", y_fake.shape)
     
     discriminator_metric_real = discriminator.train_on_batch(x_real, y_real)
     discriminator_metric_generated = discriminator.train_on_batch(
