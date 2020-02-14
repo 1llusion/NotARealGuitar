@@ -75,6 +75,9 @@ def build_generator(noise_size, channels):
         model.add(Conv2D(channels, kernel_size=3, padding="same"))
         model.add(Activation("tanh"))
         input = Input(shape=(noise_size,))
+        
+        print("noise_size:", noise_size.shape)
+        
         generated_image = model(input)
 
         return Model(input, generated_image)
