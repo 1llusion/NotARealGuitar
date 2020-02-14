@@ -104,8 +104,6 @@ def save_images(cnt, noise):
 image_shape = (IMAGE_SIZE, IMAGE_SIZE, IMAGE_CHANNELS)
 optimizer = Adam(1.5e-4, 0.5)
 
-print("image_shape:", np.shape(image_shape))
-
 discriminator = build_discriminator(image_shape)
 discriminator.compile(loss="binary_crossentropy",
 optimizer = optimizer, metrics = ["accuracy"])
@@ -132,7 +130,7 @@ fixed_noise = np.random.normal(0, 1, (PREVIEW_ROWS * PREVIEW_COLS, NOISE_SIZE))
 cnt = 1
 
 print("Ready to train!")
-
+print("image_shape:", np.shape(image_shape))
 for epoch in range(EPOCHS):
     idx = np.random.randint(0, training_data.shape[0], BATCH_SIZE)
     x_real = training_data[idx]
