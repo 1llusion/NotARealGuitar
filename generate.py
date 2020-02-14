@@ -25,7 +25,7 @@ training_data = np.load('/spell/guitars_data_small/guitars_data2.npy')
 print("Data Loaded")
 
 def build_discriminator(image_shape):
-    print(str(image_shape)
+    print(str(image_shape))
     
     model = Sequential()
     model.add(Conv2D(32, kernel_size=3, strides=2,
