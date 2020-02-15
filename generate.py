@@ -101,7 +101,11 @@ def save_images(cnt, noise):
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     filename = os.path.join(output_path, f"{cnt}.png")
+    generatorname = os.path.join(output_path + str(cnt) + "_generator.h5")
+    discriminatorname = os.path.join(output_path + str(cnt) + "_discriminator.h5")
     im = Image.fromarray(image_array)
+    generator.save(generatorname)
+    discriminator.save(discriminatorname)
     im.save(filename)
 
 image_shape = (IMAGE_SIZE, IMAGE_SIZE, IMAGE_CHANNELS)
