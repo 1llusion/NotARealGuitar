@@ -15,7 +15,7 @@ SAVE_FREQ = 100
 # Size vector to generate images from
 NOISE_SIZE = 100
 # Configuration
-EPOCHS = 500 # number of iterations
+EPOCHS = 300 # number of iterations
 BATCH_SIZE = 32
 GENERATE_RES = 3
 IMAGE_SIZE = 224 # rows/cols
