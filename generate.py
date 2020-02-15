@@ -15,13 +15,13 @@ SAVE_FREQ = 100
 # Size vector to generate images from
 NOISE_SIZE = 100
 # Configuration
-EPOCHS = 10000 # number of iterations
+EPOCHS = 500 # number of iterations
 BATCH_SIZE = 32
 GENERATE_RES = 3
 IMAGE_SIZE = 224 # rows/cols
 IMAGE_CHANNELS = 3
 
-training_data = np.load('/spell/guitars_data_small/guitars_data2.npy')
+training_data = np.load('/spell/guitars/guitars_data_clean.npy')
 print("Data Loaded")
 
 def build_discriminator(image_shape):
